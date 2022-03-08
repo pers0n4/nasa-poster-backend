@@ -6,12 +6,12 @@ export class PostersController {
   constructor(private readonly postersService: PostersService) {}
 
   @Get()
-  findAll() {
-    return this.postersService.findAll();
+  findRoot() {
+    return this.postersService.findChildren();
   }
 
   @Get(":id")
-  findOne(@Param("id") id: string) {
-    return this.postersService.findOne(+id);
+  findNode(@Param("id") id: string) {
+    return this.postersService.findChildren(+id);
   }
 }

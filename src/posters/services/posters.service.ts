@@ -22,6 +22,15 @@ export class PostersService {
     return this.posterRepository.findOne(id);
   }
 
+  findChildren(parentId: number | null = null) {
+    return this.posterRepository.find({
+      where: {
+        parent: parentId,
+      },
+      relations: ["parent"],
+    });
+  }
+
   // update(id: number, updatePosterDto: UpdatePosterDto) {
   //   return `This action updates a #${id} poster`;
   // }

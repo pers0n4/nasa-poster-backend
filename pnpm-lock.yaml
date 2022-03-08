@@ -6,6 +6,7 @@ specifiers:
   '@nestjs/core': ^8.0.0
   '@nestjs/platform-express': ^8.0.0
   '@nestjs/schematics': ^8.0.0
+  '@nestjs/serve-static': ^2.2.2
   '@nestjs/testing': ^8.0.0
   '@nestjs/typeorm': ^8.0.3
   '@types/express': ^4.17.13
@@ -36,6 +37,7 @@ dependencies:
   '@nestjs/common': 8.4.0_0a8b9973a45cbeaad6b0063efdcaad84
   '@nestjs/core': 8.4.0_2e10c1a16efb48b2968dca34c1adcfc4
   '@nestjs/platform-express': 8.4.0_31e7036b193d6d3c9cadab18cbb4af84
+  '@nestjs/serve-static': 2.2.2_31e7036b193d6d3c9cadab18cbb4af84
   '@nestjs/typeorm': 8.0.3_a8e966c473b8cac7d0f44522ae3cdd56
   reflect-metadata: 0.1.13
   rimraf: 3.0.2
@@ -879,6 +881,17 @@ packages:
     transitivePeerDependencies:
       - chokidar
     dev: true
+
+  /@nestjs/serve-static/2.2.2_31e7036b193d6d3c9cadab18cbb4af84:
+    resolution: {integrity: sha512-3Mr+Q/npS3N7iGoF3Wd6Lj9QcjMGxbNrSqupi5cviM0IKrZ1BHl5qekW95rWYNATAVqoTmjGROAq+nKKpuUagQ==}
+    peerDependencies:
+      '@nestjs/common': ^6.0.0 || ^7.0.0 || ^8.0.0
+      '@nestjs/core': ^6.0.0 || ^7.0.0 || ^8.0.0
+    dependencies:
+      '@nestjs/common': 8.4.0_0a8b9973a45cbeaad6b0063efdcaad84
+      '@nestjs/core': 8.4.0_2e10c1a16efb48b2968dca34c1adcfc4
+      path-to-regexp: 0.1.7
+    dev: false
 
   /@nestjs/testing/8.4.0_5038ecb39d0fed2140e79e9371a95289:
     resolution: {integrity: sha512-Gk9OW4RpiIGDOROHS7O271uJEpIddQP94zlkPOVOu3HPUxntfKbmDU4cDaCqC0PQ9Jtj71C0H1j9RS8ituYLAw==}

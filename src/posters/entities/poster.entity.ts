@@ -15,7 +15,7 @@ export class Poster {
   name: string;
 
   @Column()
-  type: string;
+  type: "DIRECTORY" | "FILE";
 
   @Column({ nullable: true })
   filePath: string;

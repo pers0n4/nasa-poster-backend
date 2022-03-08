@@ -1,1 +1,28 @@
-export class Poster {}
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  OneToMany,
+} from "typeorm";
+
+@Entity()
+export class Poster {
+  @PrimaryGeneratedColumn()
+  id: number;
+
+  @Column()
+  name: string;
+
+  @Column()
+  type: string;
+
+  @Column({ nullable: true })
+  filePath: string;
+
+  @ManyToOne(() => Poster, (poster) => poster.children)
+  parent: Poster;
+
+  @OneToMany(() => Poster, (poster) => poster.parent)
+  children: Poster[];
+}

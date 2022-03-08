@@ -23,6 +23,6 @@ export class Poster {
   @ManyToOne(() => Poster, (poster) => poster.children)
   parent: Poster;
 
-  @OneToMany(() => Poster, (poster) => poster.parent)
+  @OneToMany(() => Poster, (poster) => poster.parent, { cascade: ["insert"] })
   children: Poster[];
 }

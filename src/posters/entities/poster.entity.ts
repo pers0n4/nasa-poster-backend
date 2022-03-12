@@ -1,3 +1,4 @@
+import { Transform } from "class-transformer";
 import {
   Entity,
   Column,
@@ -20,6 +21,7 @@ export class Poster {
   @Column({ nullable: true })
   filePath: string;
 
+  @Transform(({ value }) => value?.id && { id: value.id })
   @ManyToOne(() => Poster, (poster) => poster.children)
   parent: Poster;
 

@@ -11,7 +11,7 @@
 
 ## Description
 
-This service is an alternative of 프로그래머스 과제관 고양이 사진첩 애플리케이션's backend.
+This service is an alternative of [프로그래머스 과제관 고양이 사진첩 애플리케이션](https://programmers.co.kr/skill_check_assignments/100)'s backend.
 
 ## Installation
 
@@ -75,11 +75,11 @@ npm run test:cov
     "type": "DIRECTORY",
     "filePath": null
   },
-  ...
+  // ...
 ]
 ```
 
-### `GET` /posters/:id
+### `GET` /posters/4
 
 ```json
 [
@@ -110,7 +110,7 @@ npm run test:cov
       "id": 4
     }
   },
-  ...
+  // ...
   {
     "id": 26,
     "name": "Earth's Moon",
